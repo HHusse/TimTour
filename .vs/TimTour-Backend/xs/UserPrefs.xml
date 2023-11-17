@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{E8B72826-1205-4ADE-86A3-0F4305D867C0}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.TimTour-Backend.Data FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TimTour-Backend/Program.cs">
+    <Files>
+      <File FileName="TimTour-Backend/Program.cs" Line="3" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TimTour-Backend" expanded="True">
+            <Node name="TimTour-Backend" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.TimTour-Backend PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.TimTour-Backend.Business FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+</Properties>
