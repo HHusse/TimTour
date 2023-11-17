@@ -1,0 +1,9 @@
+{
+  "CertificatePath": "",
+  "CertificatePassword": "",
+  "ConnectionStrings": {
+    "SQLServer": ""
+  },
+  "HTTP_Port": 80,
+  "HTTPS_Port": 443
+}
