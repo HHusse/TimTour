@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
 using TimTour_Backend.Data;
 
 public class Startup
@@ -14,13 +13,14 @@ public class Startup
         Configuration = configuration;
     }
 
-
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddMvc();
+
+        string connectionString = Configuration.GetConnectionString("SQLServer");
         services.AddDbContext<TimTourContext>(opt =>
         {
-            opt.UseSqlServer(Configuration.GetConnectionString("SQLServer"));
+            opt.UseSqlServer(connectionString);
         });
     }
 
