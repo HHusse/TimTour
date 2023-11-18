@@ -10,7 +10,7 @@ services:
     depends_on:
       - db
     environment:
-      SQLCONNECTIONSTRING: "Server=db,1433;Database=YourDatabase;User Id=sa;Password=P@ssword123;TrustServerCertificate=True;"
+      SQLCONNECTIONSTRING: "Server=db,1433;Database=TimTourDB;User Id=sa;Password=P@ssword123;TrustServerCertificate=True;"
     networks:
       - appnetwork
 

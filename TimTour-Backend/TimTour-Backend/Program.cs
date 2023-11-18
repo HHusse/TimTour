@@ -19,10 +19,7 @@ class Program
 
         using (var context = new TimTourContext(dbContextOptions.Options))
         {
-            if (context.Database.EnsureCreated())
-            {
-                context.Database.Migrate();
-            }
+            context.Database.Migrate();
         }
 
         IHostBuilder hostBuilder = Host.CreateDefaultBuilder()
