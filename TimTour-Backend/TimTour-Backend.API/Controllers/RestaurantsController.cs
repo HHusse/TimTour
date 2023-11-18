@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
 using TimTour_Backend.Business.Actions;
+using TimTour_Backend.Business.Data;
+using TimTour_Backend.Business.Mappers;
 using TimTour_Backend.Data;
 
 namespace TimTour_Backend.API.Controllers
@@ -20,7 +22,24 @@ namespace TimTour_Backend.API.Controllers
         {
             RestaurantAction action = new RestaurantAction(Context);
 
-            return Ok(await action.Run());
+            return Ok(RestaurantMapper.MapToRestaurantsResponse(await action.Run()));
+        }
+
+        [HttpGet("filtred")]
+        public async Task<ActionResult> GetEventsFiltredAsync(string type)
+        {
+            try
+            {
+                RestaurantType searchedType = RestaurantTypeMapper.Mapper.First(t => t.Value == type).Key;
+                RestaurantAction action = new RestaurantAction(Context);
+
+                return Ok(RestaurantMapper.MapToRestaurantsResponse(await action.Run((int)searchedType)));
+            }
+            catch (InvalidOperationException)
+            {
+                var response = new { message = $"Bad parameter [type] does not contain [{type}]" };
+                return BadRequest(response);
+            }
         }
     }
 }

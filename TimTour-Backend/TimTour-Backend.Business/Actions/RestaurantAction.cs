@@ -24,6 +24,17 @@ namespace TimTour_Backend.Business.Actions
 
             return restaurants;
         }
+
+        public async Task<List<Restaurant>> Run(int type)
+        {
+            List<Restaurant> restaurants = new List<Restaurant>();
+            RestaurantRepository restaurantRepository = new RestaurantRepository(Context);
+            List<RestaurantDto> dtoRestaurants = await restaurantRepository.GetRstaurantByType(type);
+
+            dtoRestaurants.ForEach(e => restaurants.Add(RestaurantMapper.MapToRestaurant(e)));
+
+            return restaurants;
+        }
     }
 }
 

@@ -23,7 +23,7 @@ const LoadingPage = ({ navigation }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigation.navigate('Home');
-    }, 2000);
+    }, 20000);
 
     // Clear the timer on component unmount
     return () => clearTimeout(timer);

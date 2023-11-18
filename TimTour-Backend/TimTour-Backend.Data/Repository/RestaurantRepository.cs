@@ -15,6 +15,11 @@ namespace TimTour_Backend.Data.Repository
         {
             return Context.Restaurants.ToList();
         }
+
+        public async Task<List<RestaurantDto>> GetRstaurantByType(int type)
+        {
+            return Context.Restaurants.Where(r => r.Type == type).ToList();
+        }
     }
 }
 

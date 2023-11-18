@@ -11,6 +11,7 @@ namespace TimTour_Backend.Data.DataModel
         public int Id { get; set; }
 
         public string Name { get; set; }
+        public int Type { get; set; }
         public string Address { get; set; }
         public string PhoneNumber { get; set; }
         public string? WebSiteURL { get; set; }
