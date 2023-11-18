@@ -10,14 +10,16 @@ public class Startup
 
     public Startup(IConfiguration configuration)
     {
-        Configuration = configuration;
+        Configuration = new ConfigurationBuilder()
+        .SetBasePath(Directory.GetCurrentDirectory())
+        .AddJsonFile("config.json")
+        .Build();
     }
 
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddMvc();
-
-        string connectionString = Configuration.GetConnectionString("SQLServer");
+        string? connectionString = Environment.GetEnvironmentVariable("SQLCONNECTIONSTRING");
         services.AddDbContext<TimTourContext>(opt =>
         {
             opt.UseSqlServer(connectionString);

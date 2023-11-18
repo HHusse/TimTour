@@ -15,20 +15,14 @@ class Program
 
 
         var dbContextOptions = new DbContextOptionsBuilder<TimTourContext>()
-                .UseSqlServer(config.ConnectionStrings.SQLServer)
+                .UseSqlServer(Environment.GetEnvironmentVariable("SQLCONNECTIONSTRING"))
                 .Options;
-
-        IConfigurationBuilder configBuilder = new ConfigurationBuilder()
-                    .SetBasePath(Directory.GetCurrentDirectory())
-                    .AddJsonFile("config.json");
-        var configuration = configBuilder.Build();
 
         IHostBuilder hostBuilder = Host.CreateDefaultBuilder()
             .ConfigureWebHostDefaults(webBuilder =>
             {
                 webBuilder
                     .UseStartup<Startup>()
-                    .UseConfiguration(configuration)
                     .UseKestrel((hostingContext, options) =>
                     {
                         options.Listen(IPAddress.Any, config.HTTP_Port);
