@@ -11,7 +11,8 @@ export default function App() {
   return (
     <GlobalProvider>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home">
+        <Stack.Navigator initialRouteName="LoadingPage">
+          <Stack.Screen name="LoadingPage" component={LoadingPage} options={{headerShown: false}}/>
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen
             name="Details"
@@ -22,7 +23,6 @@ export default function App() {
               // Add other header customization options here
             }}
           />
-          <Stack.Screen name="LoadingPage" component={LoadingPage} />
         </Stack.Navigator>
       </NavigationContainer>
     </GlobalProvider>
