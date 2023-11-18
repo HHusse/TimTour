@@ -12,6 +12,13 @@ namespace TimTour_Backend.Data
         public TimTourContext(DbContextOptions<TimTourContext> options) : base(options)
         {
         }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(Environment.GetEnvironmentVariable("SQLCONNECTIONSTRING"));
+            }
+        }
         public DbSet<EventDto> Events { get; set; }
         public DbSet<RestaurantDto> Restaurants { get; set; }
         public DbSet<MuseumDto> Museums { get; set; }

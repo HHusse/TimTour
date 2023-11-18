@@ -19,10 +19,9 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddMvc();
-        string? connectionString = Environment.GetEnvironmentVariable("SQLCONNECTIONSTRING");
         services.AddDbContext<TimTourContext>(opt =>
         {
-            opt.UseSqlServer(connectionString);
+            opt.UseSqlServer(Environment.GetEnvironmentVariable("SQLCONNECTIONSTRING"));
         });
     }
 

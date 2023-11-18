@@ -1,10 +1,10 @@
 INSERT INTO [TimTourDB].[dbo].[Restaurants] 
             ([Name], [Type], [Address], [PhoneNumber], [WebSiteURL])
 VALUES 
-            ('Curtea Berarilor', 1, 'Strada Proclamația de la Timișoara 7, Timișoara 300054', '0726743789', 'https://www.facebook.com/pg/curteaberii.timisoara/posts/?ref=page_internal'),
+            ('Curtea Berarilor', 1, 'Strada Proclamatia de la Timisoara 7, Timisoara 300054', '0726743789', 'https://www.facebook.com/pg/curteaberii.timisoara/posts/?ref=page_internal'),
             ('Le Monelline', 2, 'Strada episcop Pacha Augustin NR 5 Piata Unirii, Timisoara 300055', '+40 744 104 846', 'https://www.lemonelline.com'),
             ('Anturaj', 1, 'B-dul Vasile Parvan 5, Timisoara 300223', '+40 799 300 800', 'https://web.facebook.com/anturaj.tm/?_rdc=1&_rdr'),
-            ('Cinque Terre', 2, 'Strada Blaga Lucian 1 Piața Libertății, Timisoara 300001', '+40 731 634 687', 'https://cinque-terre-timisoara.business.site/?utm_source=gmb&utm_medium=referral'),
+            ('Cinque Terre', 2, 'Strada Blaga Lucian 1 Piata Libertatii, Timisoara 300001', '+40 731 634 687', 'https://cinque-terre-timisoara.business.site/?utm_source=gmb&utm_medium=referral'),
             ('Enjoy Piaţa Unirii', 3, 'Piata Unirii Nr. 9, Timisoara 300085', '+40 733 380 001', ''),
             ('Restaurant Pizzerie Casa Thalia', 4, 'Str. Holdelor 4, Timisoara 300270', '+40 751 270 311', 'https://www.casathalia.ro'),
             ('Restaurant Casa del Sole', 1, 'Str. Romulus Nr.12 Boutique Hotel Casa del Sole, Timisoara 300238', '+40 770 346 886', 'https://restaurant.casadelsole.ro'),
@@ -16,9 +16,9 @@ VALUES
 INSERT INTO [TimTourDB].[dbo].[Museums] 
             ([Name], [Address], [WebSiteURL])
 VALUES 
-            ('Muzeul de Arta', 'Piața Unirii 1, Timișoara 300085', 'https://muzeuldeartatm.ro'),
-            ('Muzeul Satului Banatean', 'Strada Avram Imbroane 1, Timișoara 300136', 'http://muzeulsatuluibanatean.ro/'),
-            ('Muzeul de Transport Public Corneliu Miklosi', 'Bulevardul Take Ionescu 83, Timișoara 300303', 'https://web.facebook.com/profile.php?id=100069624110005&locale=ro_RO&_rdc=1&_rdr'),
+            ('Muzeul de Arta', 'Piata Unirii 1, Timisoara 300085', 'https://muzeuldeartatm.ro'),
+            ('Muzeul Satului Banatean', 'Strada Avram Imbroane 1, Timisoara 300136', 'http://muzeulsatuluibanatean.ro/'),
+            ('Muzeul de Transport Public Corneliu Miklosi', 'Bulevardul Take Ionescu 83, Timisoara 300303', 'https://web.facebook.com/profile.php?id=100069624110005&locale=ro_RO&_rdc=1&_rdr'),
             ('Muzeul Catedralei Mitropolitane', 'Timisoara, Bulevardul Regele Ferdinand I', 'https://mitropolia-banatului.ro/colectia-de-arta-bisericeasca-veche/');
 
 
@@ -46,17 +46,17 @@ VALUES
             ('Aethernativ', 'Strada Marasesti 14, Ap. 3, Timisoara 300077', '0724 012 364', ''),
             ('The 80s Pub', 'Str Aries, nr 19 Casa Tineretului, Timisoara 300579', '0731 692 051', 'https://www.facebook.com/The80sPub/'),
             ('TapRoom', 'Piata Traian nr 6, Timisoara 300102', '0720 008 732', 'https://www.facebook.com/taproomtm/'),
-            ('Bibliotheka', ' Strada Eugeniu de Savoya 24, Timișoara 300181', '0256 200 555', 'https://bibliotheka.ro'),
+            ('Bibliotheka', ' Strada Eugeniu de Savoya 24, Timisoara 300181', '0256 200 555', 'https://bibliotheka.ro'),
             ('Coco', 'Strada Eugeniu de Savoya 1 G, Timisoara 300055', '0722 740 717', 'https://www.facebook.com/COCOTimisoara/?locale=ro_RO'),
             ('Manufactura', 'Splaiul Vladimirescu Tudor nr. 9, Timisoara 300195', '0722 892 356', 'https://www.facebook.com/manufactura.timisoara/');
 
 INSERT INTO [TimTourDB].[dbo].[Events] 
             ([Name], [Type], [Date], [Time], [Location], [LocationAddress])
 VALUES 
-            ('Your Electro Way Dance Battle Timișoara', 4, '2023-11-18', '13:00', 'FABER', 'Splaiul Peneș Curcanul 4-5, Timișoara'),
-            ('HAMLET', 1 ,'2023-11-30', '19:00', 'Teatrul Național "Mihai Eminescu"', 'Str. Mărăşeşti nr. 2, 300086 Timişoara'),
-            ('Familia Addams', 2, '2023-11-27', '19:00', 'OPERA NAȚIONALĂ ROMÂNĂ din TIMIȘOARA', 'Str. Mărășești nr. 2, 300080 Timișoara'),
-            ('Nebun dupa tine', 2, '2023-11-23', '19:00', 'OPERA NAȚIONALĂ ROMÂNĂ din TIMIȘOARA', 'Str. Mărășești nr. 2, 300080 Timișoara'),
-            ('M.G.L - The Goat is Back', 3, '2023-11-24', '19:00', 'Heaven', 'Strada Ripensia, Nr. 40, Timișoara'),
+            ('Your Electro Way Dance Battle Timisoara', 4, '2023-11-18', '13:00', 'FABER', 'Splaiul Penes Curcanul 4-5, Timisoara'),
+            ('HAMLET', 1 ,'2023-11-30', '19:00', 'Teatrul National "Mihai Eminescu"', 'Str. Maraşeşti nr. 2, 300086 Timişoara'),
+            ('Familia Addams', 2, '2023-11-27', '19:00', 'OPERA NATIONALA ROMÂNA din TIMIsOARA', 'Str. Marasesti nr. 2, 300080 Timisoara'),
+            ('Nebun dupa tine', 2, '2023-11-23', '19:00', 'OPERA NATIONALA ROMÂNA din TIMIsOARA', 'Str. Marasesti nr. 2, 300080 Timisoara'),
+            ('M.G.L - The Goat is Back', 3, '2023-11-24', '19:00', 'Heaven', 'Strada Ripensia, Nr. 40, Timisoara'),
             ('Stand-up Comedy cu Dan Badea - RAU VEGAN', 4, '2023-11-21', '18:00', 'Sala Capitol Timisoara', 'Bd. Constantin Diaconovici Loga, 2, Timisoara'),
-            ('Bărbatul perfect defect', 4, '2023-11-20', '19:00', 'Sala Capitol Timisoara', 'Bd. Constantin Diaconovici Loga, 2, Timisoara');
+            ('Barbatul perfect defect', 4, '2023-11-20', '19:00', 'Sala Capitol Timisoara', 'Bd. Constantin Diaconovici Loga, 2, Timisoara');
