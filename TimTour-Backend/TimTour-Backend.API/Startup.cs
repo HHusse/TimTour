@@ -23,10 +23,19 @@ public class Startup
         {
             opt.UseSqlServer(Environment.GetEnvironmentVariable("SQLCONNECTIONSTRING"));
         });
+        services.AddCors(options =>
+        {
+            options.AddPolicy("AllowOrigin",
+                builder => builder
+                    .AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
+        });
     }
 
     public void Configure(IApplicationBuilder app)
     {
+        app.UseCors("AllowOrigin");
         app.UseRouting();
         app.UseEndpoints(endpoints =>
         {

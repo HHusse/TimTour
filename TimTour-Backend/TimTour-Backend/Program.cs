@@ -13,7 +13,7 @@ class Program
         var configManager = new TimTour_Backend.Business.Configuration.ConfigurationManager();
         Config config = configManager.GetConfiguration();
 
-
+        Console.WriteLine(Environment.GetEnvironmentVariable("SQLCONNECTIONSTRING"));
         var dbContextOptions = new DbContextOptionsBuilder<TimTourContext>()
                 .UseSqlServer(Environment.GetEnvironmentVariable("SQLCONNECTIONSTRING"));
 
