@@ -6,6 +6,11 @@ import { GlobalProvider } from "./src/context/GlobalContext";
 import HomeScreen from "./src/pages/Homepage";
 import DetailsScreen from "./src/pages/DetailsPage";
 import LoadingPage from "./src/pages/LoadingPage";
+import RestaurantsScreen from "./src/pages/RestaurantsPage";
+import AccomodationPage from "./src/pages/AccomodationPage";
+import BarsPage from "./src/pages/BarsPage";
+import EventsPage from "./src/pages/EventsPage";
+import MuseumPage from "./src/pages/MuseumPage";
 const Stack = createStackNavigator();
 export default function App() {
   return (
@@ -25,6 +30,51 @@ export default function App() {
           <Stack.Screen
             name="Details"
             component={DetailsScreen}
+            options={{
+              headerShown: false,
+
+              // Add other header customization options here
+            }}
+          />
+          <Stack.Screen
+            name="Restaurants"
+            component={RestaurantsScreen}
+            options={{
+              headerShown: false,
+
+              // Add other header customization options here
+            }}
+          />
+          <Stack.Screen
+            name="Accomodation"
+            component={AccomodationPage}
+            options={{
+              headerShown: false,
+
+              // Add other header customization options here
+            }}
+          />
+          <Stack.Screen
+            name="Bars"
+            component={BarsPage}
+            options={{
+              headerShown: false,
+
+              // Add other header customization options here
+            }}
+          />
+          <Stack.Screen
+            name="Events"
+            component={EventsPage}
+            options={{
+              headerShown: false,
+
+              // Add other header customization options here
+            }}
+          />
+          <Stack.Screen
+            name="Museum"
+            component={MuseumPage}
             options={{
               headerShown: false,
 
