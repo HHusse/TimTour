@@ -32,31 +32,31 @@ const MyComponent = () => {
           {/* First Row */}
           <View style={styles.row}>
             <TouchableOpacity
-              style={styles.button}
+              style={styles.ActivityButton}
               onPress={() => handleButtonPress(1)}
             >
               <Image
-                source={require("../../assets/CityImage.jpg")}
+                source={require("../../assets/group_restaurants.png")}
                 style={styles.Activityimage}
               />
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={styles.button}
+              style={styles.ActivityButton}
               onPress={() => handleButtonPress(2)}
             >
               <Image
-                source={require("../../assets/CityImage.jpg")}
+                source={require("../../assets/grup_accomodation.png")}
                 style={styles.Activityimage}
               />
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={styles.button}
+              style={styles.ActivityButton}
               onPress={() => handleButtonPress(3)}
             >
               <Image
-                source={require("../../assets/CityImage.jpg")}
+                source={require("../../assets/group_drinks.png")}
                 style={styles.Activityimage}
               />
             </TouchableOpacity>
@@ -65,21 +65,21 @@ const MyComponent = () => {
           {/* Second Row */}
           <View style={styles.row}>
             <TouchableOpacity
-              style={styles.button}
+              style={styles.ActivityButton}
               onPress={() => handleButtonPress(4)}
             >
               <Image
-                source={require("../../assets/CityImage.jpg")}
+                source={require("../../assets/group_events.png")}
                 style={styles.Activityimage}
               />
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={styles.button}
+              style={styles.ActivityButton}
               onPress={() => handleButtonPress(5)}
             >
               <Image
-                source={require("../../assets/CityImage.jpg")}
+                source={require("../../assets/group_placetovisit.png")}
                 style={styles.Activityimage}
               />
             </TouchableOpacity>
@@ -92,7 +92,7 @@ const MyComponent = () => {
 
 const styles = StyleSheet.create({
   container: {
-    height: "30%",
+    height: "20%",
     justifyContent: "flex-start", // Align items at the top
     alignItems: "center",
   },
@@ -133,17 +133,30 @@ const styles = StyleSheet.create({
   Buttoncontainer: {
     flex: 1,
     padding: 16,
+    paddingTop: 40,
     justifyContent: "center",
     alignItems: "center",
   },
   row: {
     flexDirection: "row",
     marginBottom: 16,
+    paddingTop: 60,
+    gap: 90,
   },
   Activityimage: {
-    width: "100%",
-    height: "100%",
+    width: 110,
+    height: 140,
+    borderRadius: 20,
     resizeMode: "cover",
+  },
+  ActivityButton: {
+    marginTop: 20,
+    padding: 15,
+    borderRadius: 20,
+    width: 30,
+    height: 50,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
 
