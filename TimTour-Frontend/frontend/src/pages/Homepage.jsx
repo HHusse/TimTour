@@ -8,7 +8,7 @@ import {
   Image,
 } from "react-native";
 
-const MyComponent = () => {
+const MyComponent = ({ navigation }) => {
   return (
     <View style={styles.container}>
       {/* Image Background with Gray Filter */}
@@ -33,7 +33,7 @@ const MyComponent = () => {
           <View style={styles.row}>
             <TouchableOpacity
               style={styles.ActivityButton}
-              onPress={() => handleButtonPress(1)}
+              onPress={() => navigation.navigate("Restaurants")}
             >
               <Image
                 source={require("../../assets/group_restaurants.png")}
@@ -43,7 +43,7 @@ const MyComponent = () => {
 
             <TouchableOpacity
               style={styles.ActivityButton}
-              onPress={() => handleButtonPress(2)}
+              onPress={() => navigation.navigate("Accomodation")}
             >
               <Image
                 source={require("../../assets/grup_accomodation.png")}
@@ -53,7 +53,7 @@ const MyComponent = () => {
 
             <TouchableOpacity
               style={styles.ActivityButton}
-              onPress={() => handleButtonPress(3)}
+              onPress={() => navigation.navigate("Bars")}
             >
               <Image
                 source={require("../../assets/group_drinks.png")}
@@ -66,7 +66,7 @@ const MyComponent = () => {
           <View style={styles.row}>
             <TouchableOpacity
               style={styles.ActivityButton}
-              onPress={() => handleButtonPress(4)}
+              onPress={() => navigation.navigate("Events")}
             >
               <Image
                 source={require("../../assets/group_events.png")}
@@ -76,7 +76,7 @@ const MyComponent = () => {
 
             <TouchableOpacity
               style={styles.ActivityButton}
-              onPress={() => handleButtonPress(5)}
+              onPress={() => navigation.navigate("Museum")}
             >
               <Image
                 source={require("../../assets/group_placetovisit.png")}
@@ -85,6 +85,51 @@ const MyComponent = () => {
             </TouchableOpacity>
           </View>
         </View>
+      </View>
+      <View style={styles.FooterContainer}>
+        {/* Image Background covering the full view */}
+        <ImageBackground
+          source={require("../../assets/wave.png")}
+          style={styles.imageBackground}
+        >
+          {/* Overlay View with Text */}
+          <View style={styles.footerOverlay}>
+            <Text style={styles.overlayText}>Useful Tools</Text>
+          </View>
+
+          {/* Three Buttons with Images */}
+          <View style={styles.footerButtonContainer}>
+            <TouchableOpacity
+              style={styles.footerButton}
+              onPress={() => handleButtonPress(1)}
+            >
+              <Image
+                source={require("../../assets/group_tanslator.png")}
+                style={styles.footerButtonImage}
+              />
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.footerButton}
+              onPress={() => handleButtonPress(2)}
+            >
+              <Image
+                source={require("../../assets/currency_exchange.png")}
+                style={styles.footerButtonImage}
+              />
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.footerButton}
+              onPress={() => handleButtonPress(3)}
+            >
+              <Image
+                source={require("../../assets/group_public_transport.png")}
+                style={styles.footerButtonImage}
+              />
+            </TouchableOpacity>
+          </View>
+        </ImageBackground>
       </View>
     </View>
   );
@@ -158,6 +203,15 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  FooterContainer: {
+    width: "100%",
+    paddingTop: 20,
+  },
+  footerOverlay: {},
+  overlayText: {},
+  footerButtonContainer: { width: 30, height: 30 },
+  footerButton: {},
+  footerButtonImage: {},
 });
 
 export default MyComponent;
