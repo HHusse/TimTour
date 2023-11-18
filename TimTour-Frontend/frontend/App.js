@@ -12,8 +12,16 @@ export default function App() {
     <GlobalProvider>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="LoadingPage">
-          <Stack.Screen name="LoadingPage" component={LoadingPage} options={{headerShown: false}}/>
-          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen
+            name="LoadingPage"
+            component={LoadingPage}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{ headerShown: false }}
+          />
           <Stack.Screen
             name="Details"
             component={DetailsScreen}
