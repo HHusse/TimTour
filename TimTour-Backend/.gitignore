@@ -221,9 +221,6 @@ project.lock.json
 # UWP Projects
 AppPackages/
 
-# Entity Framework Migrations
-*/Migrations/*
-
 #####
 # End of core ignore list, below put you custom 'per project' settings (patterns or path)
 #####
