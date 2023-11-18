@@ -12,12 +12,14 @@
     <None Remove="Configuration\" />
     <None Remove="Mappers\" />
     <None Remove="Actions\" />
+    <None Remove="ResponseModels\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="Configuration\" />
     <Folder Include="Mappers\" />
     <Folder Include="Actions\" />
+    <Folder Include="ResponseModels\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />

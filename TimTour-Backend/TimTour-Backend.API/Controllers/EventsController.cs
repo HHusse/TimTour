@@ -1,6 +1,9 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using TimTour_Backend.Business.Actions;
+using TimTour_Backend.Business.Data;
+using TimTour_Backend.Business.Mappers;
 using TimTour_Backend.Data;
 
 namespace TimTour_Backend.API.Controllers
@@ -20,15 +23,24 @@ namespace TimTour_Backend.API.Controllers
         {
             EventAction action = new EventAction(Context);
 
-            return Ok(await action.Run());
+            return Ok(EventMapper.MapToEventsResponse(await action.Run()));
         }
 
         [HttpGet("filtred")]
-        public async Task<ActionResult> GetEventsFiltredAsync(int type)
+        public async Task<ActionResult> GetEventsFiltredAsync(string type)
         {
-            EventAction action = new EventAction(Context);
+            try
+            {
+                EventType searchedType = EventTypeMapper.Mapper.First(t => t.Value == type).Key;
+                EventAction action = new EventAction(Context);
 
-            return Ok(await action.Run(type));
+                return Ok(EventMapper.MapToEventsResponse(await action.Run((int)searchedType)));
+            }
+            catch (InvalidOperationException)
+            {
+                var response = new { message = $"Bad parameter [type] does not contain [{type}]" };
+                return BadRequest(response);
+            }
         }
     }
 }
