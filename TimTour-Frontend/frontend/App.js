@@ -1,27 +1,39 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { GlobalProvider } from "./src/context/GlobalContext";
 import HomeScreen from "./src/pages/Homepage";
-import DetailsScreen from './src/pages/DetailsPage';
+import DetailsScreen from "./src/pages/DetailsPage";
+import LoadingPage from "./src/pages/LoadingPage";
 const Stack = createStackNavigator();
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Details" component={DetailsScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <GlobalProvider>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen
+            name="Details"
+            component={DetailsScreen}
+            options={{
+              headerShown: false,
+
+              // Add other header customization options here
+            }}
+          />
+          <Stack.Screen name="LoadingPage" component={LoadingPage} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </GlobalProvider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
