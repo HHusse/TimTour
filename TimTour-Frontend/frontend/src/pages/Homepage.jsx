@@ -90,7 +90,7 @@ const MyComponent = ({ navigation }) => {
         {/* Image Background covering the full view */}
         <ImageBackground
           source={require("../../assets/wave.png")}
-          style={styles.imageBackground}
+          style={styles.foooterImageBackground}
         >
           {/* Overlay View with Text */}
           <View style={styles.footerOverlay}>
@@ -144,7 +144,6 @@ const styles = StyleSheet.create({
   imageBackground: {
     width: "100%",
     height: "100%", // Adjust the height as needed
-    resizeMode: "cover",
   },
   overlay: {
     height: "100%",
@@ -204,14 +203,30 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   FooterContainer: {
+    height: 320,
     width: "100%",
-    paddingTop: 20,
+    paddingTop: 60,
   },
   footerOverlay: {},
   overlayText: {},
-  footerButtonContainer: { width: 30, height: 30 },
+  footerButtonContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 20,
+    width: 30,
+    height: 30,
+  },
   footerButton: {},
-  footerButtonImage: {},
+  footerButtonImage: {
+    height: 100,
+    width: 100,
+  },
+  foooterImageBackground: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
 });
 
 export default MyComponent;
