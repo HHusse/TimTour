@@ -2,10 +2,10 @@ import React from "react";
 import { View, Text, Button } from "react-native";
 import { useGlobalContext } from "../context/GlobalContext";
 const HomeScreen = ({ navigation }) => {
-  const { globalVariable, updateGlobalVariable } = useGlobalContext();
+  const { backendURL } = useGlobalContext();
   return (
     <View>
-      <Text>{globalVariable}</Text>
+      <Text>{backendURL}</Text>
       <Button
         title="Go to Details"
         onPress={() => navigation.navigate("Details")}

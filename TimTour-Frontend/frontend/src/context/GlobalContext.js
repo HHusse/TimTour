@@ -3,17 +3,12 @@ import React, { createContext, useContext, useState } from 'react';
 const GlobalContext = createContext();
 
 export const GlobalProvider = ({ children }) => {
-  const [globalVariable, setGlobalVariable] = useState('Backend Link');
-
-  const updateGlobalVariable = (newValue) => {
-    setGlobalVariable(newValue);
-  };
+  const [backendURL] = useState('Localhost');
 
   return (
     <GlobalContext.Provider
       value={{
-        globalVariable,
-        updateGlobalVariable,
+        backendURL,
       }}
     >
       {children}
