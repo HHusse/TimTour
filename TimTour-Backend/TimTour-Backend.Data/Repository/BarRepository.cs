@@ -16,6 +16,21 @@ namespace TimTour_Backend.Data.Repository
         {
             return Context.Bars.ToList();
         }
+
+        public async Task<BarDto> GetRandomBar()
+        {
+            int barCount = await Context.Bars.CountAsync();
+
+            Random random = new Random();
+            int randomIndex = random.Next(0, barCount);
+
+            var randomBar = await Context.Bars
+                .Skip(randomIndex)
+                .Take(1)
+                .FirstOrDefaultAsync();
+
+            return randomBar;
+        }
     }
 }
 
