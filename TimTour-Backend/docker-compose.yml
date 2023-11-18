@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5001:80"
+    depends_on:
+      - db
+    environment:
+      SQLCONNECTIONSTRING: "Server=db,1433;Database=YourDatabase;User Id=sa;Password=P@ssword123;TrustServerCertificate=True;"
+    networks:
+      - appnetwork
+
+  db:
+    image: mcr.microsoft.com/azure-sql-edge
+    environment:
+      SA_PASSWORD: "P@ssword123"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    networks:
+      - appnetwork
+
+networks:
+  appnetwork:
+    driver: bridge

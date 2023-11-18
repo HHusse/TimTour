@@ -15,8 +15,15 @@ class Program
 
 
         var dbContextOptions = new DbContextOptionsBuilder<TimTourContext>()
-                .UseSqlServer(Environment.GetEnvironmentVariable("SQLCONNECTIONSTRING"))
-                .Options;
+                .UseSqlServer(Environment.GetEnvironmentVariable("SQLCONNECTIONSTRING"));
+
+        using (var context = new TimTourContext(dbContextOptions.Options))
+        {
+            if (context.Database.EnsureCreated())
+            {
+                context.Database.Migrate();
+            }
+        }
 
         IHostBuilder hostBuilder = Host.CreateDefaultBuilder()
             .ConfigureWebHostDefaults(webBuilder =>
