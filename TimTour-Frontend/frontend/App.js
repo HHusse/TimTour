@@ -40,9 +40,16 @@ export default function App() {
             name="Restaurants"
             component={RestaurantsScreen}
             options={{
-              headerShown: false,
-
-              // Add other header customization options here
+              headerStyle: {
+                backgroundColor: '#6C0B67A6',
+                borderBottomLeftRadius: 20,
+                borderBottomRightRadius: 20,
+                height: 30,
+              },
+              headerTitleStyle: {
+                display: 'none',
+              },
+              headerTintColor: 'white',
             }}
           />
           <Stack.Screen
@@ -50,7 +57,7 @@ export default function App() {
             component={AccomodationPage}
             options={{
               headerShown: false,
-
+          
               // Add other header customization options here
             }}
           />

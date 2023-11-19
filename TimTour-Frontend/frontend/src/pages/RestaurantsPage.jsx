@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, View, Image, Text } from 'react-native';
+import { StyleSheet, View, Image, Text, TouchableOpacity } from 'react-native';
 import { useGlobalContext } from "../context/GlobalContext";
 import axios from 'axios';
 import Navbar from "../components/Navbar"
