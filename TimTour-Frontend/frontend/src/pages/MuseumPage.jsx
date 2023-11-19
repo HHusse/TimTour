@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, View, Text, ScrollView } from 'react-native';
+import { StyleSheet, View, Image, ScrollView } from 'react-native';
 import { useGlobalContext } from '../context/GlobalContext';
 import axios from 'axios';
 import MuseumInfoCard from '../components/MuseumInfoCard';
@@ -22,6 +22,10 @@ const MuseumPage = () => {
 
   return (
     <View style={styles.container}>
+        <Image
+          source={require('../../assets/museumlefttop.png')}
+          style={styles.image}
+        />
       {museumData.map((museum, index) => (
         <MuseumInfoCard key={museum.id || index} museum={museum}/>
 
@@ -36,6 +40,18 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     paddingTop: 15,
     paddingLeft: 15,
+  },
+  imageContainer: {
+    paddingTop: 15,
+    paddingLeft:15,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'flex-start',
+  },
+  image: {
+      width: 215,
+      height: 60,
   },
 });
 

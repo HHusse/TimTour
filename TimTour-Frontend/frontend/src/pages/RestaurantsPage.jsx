@@ -40,18 +40,18 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
  },
- imageContainer: {
-  paddingTop: 15,
-  paddingLeft:15,
-  flex: 1,
-  justifyContent: 'center',
-  alignItems: 'center',
-  alignSelf: 'flex-start',
-},
- image: {
-    width: 215,
-    height: 60,
- },
+  imageContainer: {
+    paddingTop: 15,
+    paddingLeft:15,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'flex-start',
+  },
+  image: {
+      width: 215,
+      height: 60,
+  },
 });
 
 export default RestaurantsPage;
