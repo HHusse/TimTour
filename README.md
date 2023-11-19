@@ -1,3 +1,6 @@
+![TimTour Logo](https://github.com/HHusse/TimTour/blob/main/TimTourLogo.png)
+
+
 Introducing TimTourist, your all-in-one travel companion designed by FullControl for an exceptional experience in Timisoara.
 
 Our team FullControl came with an ideea to help tourists that come to Timisoara to find everything in one place, Restaurants, bars, accommodation, events (theatre, opera, shows, concerts and more) and museums, all in one place. With this ideea TimTourist was born. 
