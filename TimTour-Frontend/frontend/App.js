@@ -41,23 +41,32 @@ export default function App() {
             component={RestaurantsScreen}
             options={{
               headerStyle: {
-                backgroundColor: '#6C0B67A6',
+                backgroundColor: "#6C0B67A6",
                 borderBottomLeftRadius: 20,
                 borderBottomRightRadius: 20,
                 height: 30,
               },
               headerTitleStyle: {
-                display: 'none',
+                display: "none",
               },
-              headerTintColor: 'white',
+              headerTintColor: "white",
             }}
           />
           <Stack.Screen
             name="Accomodation"
             component={AccomodationPage}
             options={{
-              headerShown: false,
-          
+              headerStyle: {
+                backgroundColor: "#6C0B67A6",
+                borderBottomLeftRadius: 20,
+                borderBottomRightRadius: 20,
+                height: 30,
+              },
+              headerTitleStyle: {
+                display: "none",
+              },
+              headerTintColor: "white",
+
               // Add other header customization options here
             }}
           />
