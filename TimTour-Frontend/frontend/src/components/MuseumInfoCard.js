@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     fontSize: 9,
     fontWeight: 'bold',
     color: '#FFFFFF',
-    marginTop: 5, // Add some spacing from the address
+    marginTop: 5,
   },
 });
 

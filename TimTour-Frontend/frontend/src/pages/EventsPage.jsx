@@ -28,30 +28,22 @@ const EventsPage = () => {
             style={styles.image}
         />
       </View>
-      <ScrollView>
         {eventsData.map((event, index) => (
-          <View key={event.id || index} style={styles.cardContainer}>
-            <EventInfoCard event={event} />
-          </View>
+          <EventInfoCard key={event.id || index} event={event}/>
         ))}
-      </ScrollView>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  pageTitle: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginBottom: 10,
+    flex: 1,
+    flexDirection: 'column',
+    paddingTop: 15,
+    paddingLeft: 15,
   },
   imageContainer: {
-    paddingTop:20,
+    paddingTop: 15,
     paddingLeft:15,
     flex: 1,
     justifyContent: 'center',

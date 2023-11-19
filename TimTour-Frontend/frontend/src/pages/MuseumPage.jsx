@@ -2,18 +2,18 @@ import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, Text, ScrollView } from 'react-native';
 import { useGlobalContext } from '../context/GlobalContext';
 import axios from 'axios';
-import EventInfoCard from '../components/EventInfoCard';
+import MuseumInfoCard from '../components/MuseumInfoCard';
 
-const EventsPage = () => {
+const MuseumPage = () => {
   const { backendURL } = useGlobalContext();
-  const [eventsData, setEventsData] = useState([]);
+  const [museumData, setMuseumData] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`${backendURL}/events`)
+      .get(`${backendURL}/museums`)
       .then((response) => {
-        console.log('Events data:', response.data);
-        setEventsData(response.data);
+        console.log('Museum data:', response.data);
+        setMuseumData(response.data);
       })
       .catch((error) => {
         console.error('Error fetching events:', error);
@@ -22,23 +22,21 @@ const EventsPage = () => {
 
   return (
     <View style={styles.container}>
-      <ScrollView>
-      {eventsData.map((event, index) => (
-        <View key={event.id || index} style={styles.cardContainer}>
-          <EventInfoCard event={event} />
-        </View>
+      {museumData.map((museum, index) => (
+        <MuseumInfoCard key={museum.id || index} museum={museum}/>
+
       ))}
-      </ScrollView>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    flex: 1,
+    flexDirection: 'column',
+    paddingTop: 15,
+    paddingLeft: 15,
   },
 });
 
-export default EventsPage;
+export default MuseumPage;

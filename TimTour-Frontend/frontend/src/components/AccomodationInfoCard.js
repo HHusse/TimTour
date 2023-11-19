@@ -13,8 +13,8 @@ const RestaurantInfoCard = ({ accomodation }) => {
       </View>
       <View style={styles.infoContainer}>
         <Text style={styles.address}>Adress: {accomodation.address}</Text>
-        <Text style={styles.phoneNumber}>Telefon nr.: {accomodation.phoneNumber}</Text>
-        <Text>Stars: {accomodation.stars} </Text>
+        <Text style={styles.phoneNumber}>Phone number: {accomodation.phoneNumber}</Text>
+        <Text style={styles.stars}>Stars: {accomodation.stars} </Text>
         <Text style={styles.websiteURL} onPress={handlePress}>WebSite</Text>
       </View>
     </View>
@@ -48,6 +48,11 @@ const styles = StyleSheet.create({
  phoneNumber: {
     fontSize: 9,
     color: '#FFFFFF',
+ },
+ stars: {
+   fontSize: 10,
+   fontWeight: 'bold',
+   color: '#FFFFFF',
  },
  websiteURL: {
     fontSize: 9,

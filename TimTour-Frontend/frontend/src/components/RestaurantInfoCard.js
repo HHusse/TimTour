@@ -12,8 +12,8 @@ const RestaurantInfoCard = ({ restaurant }) => {
         <Text style={styles.title}>{restaurant.name}</Text>
       </View>
       <View style={styles.infoContainer}>
-        <Text style={styles.address}>Adresa: {restaurant.address}</Text>
-        <Text style={styles.phoneNumber}>Telefon nr.: {restaurant.phoneNumber}</Text>
+        <Text style={styles.address}>Address: {restaurant.address}</Text>
+        <Text style={styles.phoneNumber}>Phone number: {restaurant.phoneNumber}</Text>
         <Text style={styles.websiteURL} onPress={handlePress}>WebSite</Text>
       </View>
     </View>
