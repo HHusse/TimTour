@@ -3,7 +3,7 @@
 
 Introducing TimTourist, your all-in-one travel companion designed by FullControl for an exceptional experience in Timisoara.
 
-Our team FullControl came with an ideea to help tourists that come to Timisoara to find everything in one place, Restaurants, bars, accommodation, events (theatre, opera, shows, concerts and more) and museums, all in one place. With this ideea TimTourist was born. 
+Our team FullControl came with an ideea to help tourists that come to Timisoara to find everything in one place, restaurants, bars, accommodation, events (theatre, opera, shows, concerts and more) and museums, all in one place. With this ideea TimTourist was born. 
 With this app all tourists that visit Timisoara can easily find what they want to do in every day that they are in our city. 
 
 We implement a feature that can recommend some activities that the tourist want to do in a day.
@@ -11,6 +11,7 @@ Also we have a converter for the currency to help the people to know what price 
 
 All this in one app.
 
-
 The backend of the app is made in C# .NET and the frontend in React Native.
 The database we use is SQL, for the UI/UX was made in Figma.
+
+The reason that we chose the “Most Creative Use of GitHub” subtrack was because we wanted to build a CI/CD pipeline using GitHub Actions but we didn’t have enough time.
