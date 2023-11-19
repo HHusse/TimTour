@@ -93,11 +93,6 @@ const MyComponent = ({ navigation }) => {
           source={require("../../assets/wave.png")}
           style={styles.foooterImageBackground}
         >
-          {/* Overlay View with Text */}
-          <View style={styles.footerOverlay}>
-            <Text style={styles.overlayText}>Useful Tools</Text>
-          </View>
-
           {/* Three Buttons with Images */}
           <View style={styles.footerButtonContainer}>
             <TouchableOpacity
