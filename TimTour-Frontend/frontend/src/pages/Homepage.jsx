@@ -9,6 +9,7 @@ import {
 } from "react-native";
 
 const MyComponent = ({ navigation }) => {
+
   return (
     <View style={styles.container}>
       {/* Image Background with Gray Filter */}

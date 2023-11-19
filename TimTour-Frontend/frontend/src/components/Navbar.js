@@ -3,13 +3,13 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Modal, FlatList } from 'react-native';
 
-const Navbar = () => {
+const Navbar = ({navigation}) => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
-
+  
   const menuData = [
-    { id: '1', label: 'Restaurants', onPress: () => handleMenuItemPress('Restaurants') },
+    { id: '1', label: 'Restaurants', onPress: () => navigation.navigate("Restaurants") },
     { id: '2', label: 'Eveniments', onPress: () => handleMenuItemPress('Eveniments') },
     { id: '3', label: 'Hotels', onPress: () => handleMenuItemPress('Hotels') },
     { id: '4', label: 'Pubs', onPress: () => handleMenuItemPress('Pubs') },
@@ -66,7 +66,7 @@ const Navbar = () => {
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
               <TouchableOpacity style={styles.menuItem} onPress={() => { item.onPress(); handleMenuToggle(); }}>
-                <Text style={{ color: '#fff' }}>{item.label}</Text>
+                <Text style={{ color: '#DCB1DA' }}>{item.label}</Text>
               </TouchableOpacity>
             )}
           /> 
@@ -81,11 +81,13 @@ const Navbar = () => {
 
 const styles = StyleSheet.create({
   navbar: {
-    backgroundColor: '#3498db',
+    backgroundColor: '#DCB1DA',
     padding: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    borderBottomLeftRadius: 20, // Set the bottom-left corner to 0 to make it straight
+    borderBottomRightRadius: 20,
   },
   navbarText: {
     color: '#fff',
@@ -107,7 +109,7 @@ const styles = StyleSheet.create({
   menuModal: {
     position: 'absolute',
     width: "40%",
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
   },
   menuItem: {
     padding: 20,
